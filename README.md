@@ -1,4 +1,15 @@
-# and
+# Build Sphinx Environment Using Scoop
+
+Build Sphinx environment using windows package management tool `scoop`.  
+This script does these processes.
+
+1. install Scoop
+1. install Python37 (using scoop)
+1. install Sphinx
+    - install theme (sphinx_rtd_theme)
+    - install some extentions
+    - install pandoc, latex, perl (using scoop)
+1. create sphinx document project template
 
 ## Quick start
 
