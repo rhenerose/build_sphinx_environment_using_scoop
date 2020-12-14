@@ -11,6 +11,13 @@ This script does these processes.
     - install pandoc, latex, perl (using scoop)
 1. create sphinx document project template
 
+## Requirements
+
+- Windows 7 SP1+ / Windows Server 2008+
+- PowerShell 5 (or later, include PowerShell Core) and .NET Framework 4.5 (or later)
+- PowerShell must be enabled for your user account  
+    e.g. `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
 ## Quick start
 
 1. Clone this repository.
@@ -31,7 +38,7 @@ This script does these processes.
     ```
 
 1. Open `PowerShell`
-1. Run this command to change policy.  
+1. Run the following command to change policy.  
 
     ```powershell:
     Set-ExecutionPolicy RemoteSigned -scope CurrentUser
@@ -44,7 +51,7 @@ This script does these processes.
 1. Copy `sample_conf.py` to `$SPHINX_DOC_PATH/source` and rename to `conf.py`
 
 1. Enjoy Sphinx!!!  
-    ex.)  
+    e.g.
 
     ```powershell:
     ./make html
