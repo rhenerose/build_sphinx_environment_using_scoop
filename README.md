@@ -40,19 +40,7 @@ This script does these processes.
 
 1. Run script `create_sphinx_env.ps1`.
 
-1. Create sphinx document directory and template project.
-
-    ```powershell:
-    mkdir <your_directory>
-    cd <your_directory>
-
-    # create sphinx template project
-    sphinx-quickstart --sep --project='<your_project_name>' --author='<your_name>' --release='<your_version>' --language='ja'
-    ```
-    or  
-    run script `sample_create_sphinx_project.ps1`.
-
-1. Copy `sample_conf.py` to `$SPHINX_DOC_PATH/source` and rename to `conf.py`
+1. Change directory `./sample_project` and activate venv.
 
 1. Enjoy Sphinx!!!  
     e.g.

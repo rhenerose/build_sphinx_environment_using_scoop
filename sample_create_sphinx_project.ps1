@@ -1,5 +1,5 @@
 # sphinxのドキュメントディレクトリ
-$SPHINX_DOC_PATH='c:\sphinx_doc'
+$SPHINX_DOC_PATH='./your_project'
 
 # sphinxのプロジェクト設定
 $PROJECT_NAME='your_project'
