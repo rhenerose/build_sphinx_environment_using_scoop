@@ -1,12 +1,5 @@
 # sphinx用のPython仮想環境のパス
 $SPHINX_VENV_PATH='c:\venv\sphinx'
-# sphinxのドキュメントディレクトリ
-$SPHINX_DOC_PATH='c:\sphinx_doc'
-
-# sphinxのプロジェクト設定
-$PROJECT_NAME='your_project'
-$AUTHOR_NAME='your_name'
-$RELEASE_VERSION='1.0.0'
 
 ##################################################
 # install Scoop
@@ -75,21 +68,6 @@ try {
     # install latex for pdf output
     scoop install latex
     scoop install perl
-
-
-
-
-    ##################################################
-    # create sphinx document project directory
-    ##################################################
-    mkdir ${SPHINX_DOC_PATH}
-    cd ${SPHINX_DOC_PATH}
-
-    # create template project
-    # 必要に応じてオプションの project, author, release を変更してください
-    sphinx-quickstart --sep --project=${PROJECT_NAME} --author=${AUTHOR_NAME} --release=${RELEASE_VERSION} --language='ja'
-
-
 }
 catch [Exception] {
     $error[0] | Format-List -force

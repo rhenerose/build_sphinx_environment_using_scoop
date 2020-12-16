@@ -25,16 +25,8 @@ This script does these processes.
 
     ```powershell:
     # python venv path for sphinx
-    # this script create new python venv!!
+    # WARNNING: This script create new python venv!!
     $SPHINX_VENV_PATH='c:\venv\sphinx'
-
-    # sphinx document root directory
-    $SPHINX_DOC_PATH='c:\sphinx_doc'
-
-    # sphinx project settings
-    $PROJECT_NAME='your_project'
-    $AUTHOR_NAME='your_name'
-    $RELEASE_VERSION='1.0.0'
     ```
 
 1. Open `PowerShell`
@@ -46,7 +38,19 @@ This script does these processes.
 
     if display some message, input `y` and `enter`.
 
-1. Run script `create_sphinx_env.ps1`
+1. Run script `create_sphinx_env.ps1`.
+
+1. Create sphinx document directory and template project.
+
+    ```powershell:
+    mkdir <your_directory>
+    cd <your_directory>
+
+    # create sphinx template project
+    sphinx-quickstart --sep --project='<your_project_name>' --author='<your_name>' --release='<your_version>' --language='ja'
+    ```
+    or  
+    run script `sample_create_sphinx_project.ps1`.
 
 1. Copy `sample_conf.py` to `$SPHINX_DOC_PATH/source` and rename to `conf.py`
 
