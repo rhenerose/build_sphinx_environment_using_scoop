@@ -13,9 +13,16 @@ $choice.add($yes)
 $choice.add($no)
 
 #選択プロンプトの表示
-$answer = $host.ui.PromptForChoice("Execution confirmation", "This script creates a Python virtual environment in '${SPHINX_VENV_PATH}'. Do you want to run it?", $choice, 1)
+Write-Host "###################" -ForegroundColor Red -BackgroundColor Black
+Write-Host "##### WARNING #####" -ForegroundColor Red -BackgroundColor Black
+Write-Host "###################" -ForegroundColor Red -BackgroundColor Black
+Write-Host "This script creates New Python virtual environment in '${SPHINX_VENV_PATH}'. " -ForegroundColor Red -BackgroundColor Black
+$answer = $host.ui.PromptForChoice("Execution confirmation", "Do you want to run it?", $choice, 1)
 
-if ($answer -eq 1) {exit}
+if ($answer -eq 1) {
+    Write-Host "################### " -ForegroundColor Red -BackgroundColor Black
+    exit
+}
 
 ##################################################
 # install Scoop
