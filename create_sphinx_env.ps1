@@ -15,7 +15,7 @@ $choice.add($no)
 # display choice prompt
 Write-Host "#############################" -ForegroundColor Yellow -BackgroundColor Black
 Write-Host "#####      WARNING      #####" -ForegroundColor Yellow -BackgroundColor Black
-Write-Host "#############################" -ForegroundColor Yellow -BackgroundColor Black
+Write-Host "#############################" -ForegroundColor Red -BackgroundColor Black
 Write-Host "This script creates New Python virtual environment in '${SPHINX_VENV_PATH}'. " -ForegroundColor Yellow -BackgroundColor Black
 $answer = $host.ui.PromptForChoice("Execution confirmation", "Do you want to run it?", $choice, 1)
 
