@@ -116,6 +116,7 @@ try {
     # for `.md`
     pip install recommonmark
     pip install sphinx-markdown-tables
+    pip install sphinxcontrib-svg2pdfconverter
 
     # for `.ipynb`
     pip install ipython
@@ -151,6 +152,16 @@ try {
         # Install perl
         Write-Host "install perl!!" -ForegroundColor Green
         scoop install perl
+    }
+    try {
+        # Check inkscape
+        get-command inkscape -ErrorAction Stop
+        Write-Host "inkscape command Exists!!" -ForegroundColor Yellow
+    } 
+    catch [Exception] {
+        # install inkscape
+        Write-Host "install inkscape!!" -ForegroundColor Green
+        scoop install inkscape
     }
 }
 catch [Exception] {
